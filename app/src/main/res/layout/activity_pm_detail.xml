@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pm_detail">
+
+    <include layout="@layout/bar_pm_detail"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1F93D0"
+        android:layout_below="@+id/pmDetailToolBar"
+        android:orientation="horizontal"
+        android:id="@+id/bar_compl"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Compl&amp;New SR"
+            android:id="@+id/newSRbtn"
+            android:backgroundTint="#3F75A7"
+            android:layout_marginHorizontal="5dp"
+            android:textAllCaps="false"
+            android:padding="5dp"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Compl&amp;New PR"
+            android:id="@+id/newPRbtn"
+            android:backgroundTint="#3F75A7"
+            android:layout_marginHorizontal="5dp"
+            android:textAllCaps="false"
+            android:padding="5dp"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Complete"
+            android:id="@+id/complbtn"
+            android:backgroundTint="#97BF64"
+            android:layout_marginHorizontal="5dp"
+            android:textAllCaps="false"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_layout"
+        android:layout_below="@+id/bar_compl"
+        android:background="#1F93D0"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="#9AB4C4">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACTION"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CASE"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MESSAGE"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+<include layout="@layout/fragment_action"
+    android:layout_below="@id/tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</RelativeLayout>
